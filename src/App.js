@@ -8,23 +8,33 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+import cartContext, { CartProvider } from './context/cartContext';
+import Loader from './components/Loader';
+import { useEffect, useState } from 'react';
 
 
 function App() {
 
-return (
-    
-    <BrowserRouter>
-        <NavBar />
-        <Routes>
-            <Route path='/' element={<ItemListContainer greeting={"Elija de nuestro catalogo de bebidas"}/>}/>
-            <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Elija de nuestro catalogo de bebidas"}/>}/>
-            <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-            <Route path='/cart' element={<Cart/>}/>
-            <Route path='/checkout' element={<Checkout/>}/>
-        </Routes>
-    </BrowserRouter>
-    );
+    const [loading, setLoading] = useState(true)
+
+    return (
+        <>
+        <BrowserRouter>
+            <CartProvider>
+                <NavBar />
+                {/* <Loader loading={loading}/> */}
+                <cartContext.Provider value={[]}></cartContext.Provider>
+                <Routes>
+                    <Route path='/' element={<ItemListContainer greeting={"Elija de nuestro catalogo de bebidas"}/>}/>
+                    <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Elija de nuestro catalogo de bebidas"}/>}/>
+                    <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+                    <Route path='/cart' element={<Cart/>}/>
+                    <Route path='/checkout' element={<Checkout/>}/>
+                </Routes>
+            </CartProvider>
+        </BrowserRouter>
+        </>
+        );
 }
 export default App;
 

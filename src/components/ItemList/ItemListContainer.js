@@ -11,12 +11,13 @@ const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
     
 
-
     useEffect(()=> {
 
         if(categoryId) {
             getProductsByCategory(categoryId)
-                .then((data)=> setProducts(data))
+                .then((data)=> setProducts(data)
+                )
+                
                 .catch((error) => console.warn(error)) 
         } else {
             getAllProducts()
