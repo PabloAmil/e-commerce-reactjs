@@ -45,6 +45,7 @@ const Cart = () => {
         clear()
     };
 
+
     return(
         <Container className="cart-container">
             {cart.length > 0 &&
@@ -52,6 +53,7 @@ const Cart = () => {
                 <Table striped>
                     <thead>
                         <tr>
+                        <th></th>
                         <th>Producto</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
@@ -59,18 +61,24 @@ const Cart = () => {
                     </thead>
                     <tbody>
                         {cart.map((item) => (
-                            <tr key={item.id}>
-                                <td>{item.title}</td>
-                                <td>{item.price}</td>
-                                <td>{item.quantity}</td>
-                                <td><FaTrashAlt onClick={() => handleRemove(item.id)}/></td>
-                            </tr>
+                            <> 
+                                <tr key={item.id}>
+                                    <td><img src={item.pictureUrl} className="cart-img"></img></td>
+                                    <td>{item.title}</td>
+                                    <td>{item.price}</td>
+                                    <td>{item.quantity}</td>
+                                    <td><FaTrashAlt onClick={() => handleRemove(item.id)}/></td>
+                                </tr>
+                            </>
                             ))
                         }  
                     </tbody>
                 </Table>
-                <h3>Total: ${total}</h3>
-                <Button variant="success" onClick={handleOpen}>Comprar</Button>
+                <div className="total">
+                    <h3>Total: ${total}</h3>
+                    <Button variant="success" onClick={handleOpen}>Comprar</Button>
+                    <Button variant="warning" onClick={clear}>Vaciar carrito</Button>
+                </div>
             </>
             }
             {cart.length === 0 && 

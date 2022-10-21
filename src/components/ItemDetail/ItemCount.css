@@ -1,7 +1,29 @@
 .item-counter {
+
+    width: 400px;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     margin-left: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+
+.item-counter button {
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.932);
+    color: beige;
+    border-radius: 50%;
+    border: none;
+}
+
+.button-left {
+    margin-right: 1em;
+}
+
+.button-right {
+    margin-left: 1em;
 }

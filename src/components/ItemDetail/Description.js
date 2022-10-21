@@ -5,28 +5,33 @@ import ItemCount from "./ItemCount";
 
 const Description = ( {product, itemcount, handleAdd, showItemCount} ) => {
     return (
-        <Container>
+        
             <div className="description-container">
                 <img src={product.pictureUrl}></img>
-                <div>
-                    <h3>{product.title}</h3>
-                    <h4>{product.description}</h4>
-                    <h4>${product.price}</h4>
-                </div>
-                {
-                    showItemCount && (
-                    <ItemCount initial={1} stock={15} onAdd={handleAdd}/>
-                    )
-                }
-                {
+                    <div className='product-details'>
+                        <h3>{product.title}</h3>
+                        <h4>{product.description}</h4>
+                        <h4>${product.price}</h4>
+                    {
+                        showItemCount && (
+                        <ItemCount initial={1} stock={15} onAdd={handleAdd}/>
+                        )
+                    }
+                    {
                     !showItemCount && (
-                        <Link to="/cart">
-                            <Button variant="success">Al carrito</Button>
-                        </Link>
+                        <div className='options'>
+                            <Link to="/cart">
+                                <Button variant="success">Al carrito</Button>
+                            </Link>
+                            <Link to='/'>
+                                <Button variant="primary">Seguir comprando</Button>
+                            </Link>
+                        </div>
                     ) 
-                }
+                    }
+                    </div>
                 </div>
-        </Container>
+        
             
     )
 }

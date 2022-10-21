@@ -1,4 +1,25 @@
 .itemList {
     display: flex;
     margin-top: 64px;
+    justify-content: space-evenly;
+}
+
+.itemList img {
+    height: 200px;
+    width: 200px;
+}
+
+.itemList .card {
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 1.856);
+}
+
+.card-data {
+    text-align: center;
+}
+
+.card-lower {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
 }

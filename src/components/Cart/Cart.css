@@ -2,3 +2,17 @@
     color: rgb(19, 18, 18);
     cursor: pointer;
 }
+
+.cart-img {
+    height: 150px;
+    width: 150px;
+}
+
+.table>tbody {
+    vertical-align: middle;
+}
+
+.total {
+    display: flex;
+    
+}

@@ -1,10 +1,7 @@
 import { useContext, useState } from "react";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import cartContext from "../../context/cartContext";
-import Item from "../ItemList/Item"
 import Description from "./Description";
-import ItemCount from "./ItemCount";
+
 
 const ItemDetail = ({ product }) => {
     const { addItem } = useContext(cartContext)
@@ -17,7 +14,6 @@ const ItemDetail = ({ product }) => {
         addItem(product, value);
         
     };
-
 
     return (
         <div className="itemDetailContainer">

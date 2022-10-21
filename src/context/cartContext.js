@@ -36,7 +36,7 @@ export const CartProvider = ({children}) => {
         setCart([]);
     }
 
-    const isInCart = (id) => cart.some((item) => item.id === parseInt(id));
+    const isInCart = (id) => cart.some((item) => item.id === id);
 
     const total = cart.reduce((acc, item) => {
             return acc += (item.price * item.quantity)

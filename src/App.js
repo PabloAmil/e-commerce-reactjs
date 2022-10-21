@@ -8,9 +8,9 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
-import cartContext, { CartProvider } from './context/cartContext';
+import  { CartProvider } from './context/cartContext';
 import Loader from './components/Loader';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 function App() {
@@ -23,7 +23,6 @@ function App() {
             <CartProvider>
                 <NavBar />
                 {/* <Loader loading={loading}/> */}
-                <cartContext.Provider value={[]}></cartContext.Provider>
                 <Routes>
                     <Route path='/' element={<ItemListContainer greeting={"Elija de nuestro catalogo de bebidas"}/>}/>
                     <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Elija de nuestro catalogo de bebidas"}/>}/>
