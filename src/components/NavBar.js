@@ -8,13 +8,13 @@ const NavBar = () => {
     <Navbar bg="dark" variant="dark">
         <Container>
             <Navbar.Brand as={Link} to='/'>
-                BlackAndWine
+                GAMMING HUB
             </Navbar.Brand>
             <Nav className="me-auto">
                 <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                <Nav.Link as={Link} to='/category/productos'>Productos</Nav.Link>
-                <Nav.Link as={Link} to='/category/Blancos'>Blancos</Nav.Link>
-                <Nav.Link as={Link} to='/category/Tintos'>Tintos</Nav.Link>
+                <Nav.Link as={Link} to='/category/Motherboards'>Motherboards</Nav.Link>
+                <Nav.Link as={Link} to='/category/Procesadores'>Procesadores</Nav.Link>
+                <Nav.Link as={Link} to='/category/Placas'>Placas de video</Nav.Link>
             </Nav>
             <CartWidget />
         </Container>

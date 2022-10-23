@@ -1,28 +1,45 @@
 div img {
+
     height: 350px;
     width: 350px;
 }
 
 .itemDetailContainer {
+
+    margin-top: 5em;
     background-color: rgb(3 2 2 / 48%);
-    height: 50%;
+    color: #fff;
+    height: 350px;
+    text-align: center;
+}
+
+.price {
+    color: rgb(50, 245, 138);
+}
+
+.title-container {
+    text-align: center;
 }
 
 .description-container {
     
+    margin-top: 3em;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     
 }
 
 .product-details {
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color: #fff;
 }
 
 .options {

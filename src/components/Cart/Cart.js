@@ -22,12 +22,17 @@ const Cart = () => {
     const [showModal, setShowModal] = useState(false)
     const [orderId, setOrderId] = useState()
 
+
+   
+
     const handleRemove = (itemId) => {
         removeItem(itemId)
+        // actualizar y guardar el cart en local storage
     };
 
     const handleOpen = () => {
         setShowModal(true)
+        // limpiar local storage
     };
 
     const handleClose = () => {
@@ -43,7 +48,9 @@ const Cart = () => {
         const newOrderId = await createOrder(newOrder)
         setOrderId(newOrderId);
         clear()
+        // limpiar local storage
     };
+
 
 
     return(
@@ -61,7 +68,6 @@ const Cart = () => {
                     </thead>
                     <tbody>
                         {cart.map((item) => (
-                            <> 
                                 <tr key={item.id}>
                                     <td><img src={item.pictureUrl} className="cart-img"></img></td>
                                     <td>{item.title}</td>
@@ -69,7 +75,6 @@ const Cart = () => {
                                     <td>{item.quantity}</td>
                                     <td><FaTrashAlt onClick={() => handleRemove(item.id)}/></td>
                                 </tr>
-                            </>
                             ))
                         }  
                     </tbody>
@@ -83,7 +88,7 @@ const Cart = () => {
             }
             {cart.length === 0 && 
             <> 
-                <h2>Aun no has agregado nada!</h2>
+                <h2>Aún no has agregado nada!</h2>
                 <Link to='/'>
                     <Button variant="primary">Ir a los productos</Button>
                 </Link>    

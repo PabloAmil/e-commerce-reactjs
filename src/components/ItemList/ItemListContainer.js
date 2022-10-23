@@ -5,6 +5,7 @@ import ItemList from "./ItemList";
 import { getAllProducts, getProductsByCategory } from '../../Utils/products';
 
 
+
 const ItemListContainer = ({greeting}) => {
 
     const { categoryId } = useParams();
@@ -15,9 +16,7 @@ const ItemListContainer = ({greeting}) => {
 
         if(categoryId) {
             getProductsByCategory(categoryId)
-                .then((data)=> setProducts(data)
-                )
-                
+                .then((data)=> setProducts(data))
                 .catch((error) => console.warn(error)) 
         } else {
             getAllProducts()
@@ -28,7 +27,6 @@ const ItemListContainer = ({greeting}) => {
 
     return (
         <>
-        <h1>Nuestros Productos</h1>
         <h3 className="greeting">{greeting}</h3>
         <ItemList products={products}/>
         </> 

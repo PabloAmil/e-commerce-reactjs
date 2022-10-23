@@ -52,13 +52,8 @@ export const getProductsByCategory = (categoryId) => {
         })
         .catch(error => console.warn(error))
 };
-const products = [  
-    {title: "Vino1", category: 'Blancos', description: "Bebida", price: 400, pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_970914-MLA43407379794_092020-O.webp', stock: 15},
-    {title: "Vino2", category: 'Blancos', description: "Bebida", price: 600, pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_970914-MLA43407379794_092020-O.webp', stock: 15},
-    {title: "Vino3", category: 'Tintos', description: "Bebida", price: 800, pictureUrl: 'https://www.smartnfinal.com.mx/wp-content/uploads/2018/11/8226-vino-tinto-lambrusco-reunite-750-ml.jpg', stock: 15},
-    {title: "Vino4", category: 'Tintos', description: "Bebida", price: 1000, pictureUrl: 'https://www.smartnfinal.com.mx/wp-content/uploads/2018/11/8226-vino-tinto-lambrusco-reunite-750-ml.jpg', stock: 15}
-];
 
+const products = []
 
 export const createAllProducts = async () => {
 

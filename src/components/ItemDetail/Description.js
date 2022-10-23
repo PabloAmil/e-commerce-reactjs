@@ -9,9 +9,10 @@ const Description = ( {product, itemcount, handleAdd, showItemCount} ) => {
             <div className="description-container">
                 <img src={product.pictureUrl}></img>
                     <div className='product-details'>
-                        <h3>{product.title}</h3>
-                        <h4>{product.description}</h4>
-                        <h4>${product.price}</h4>
+                        <div className='title-container'>
+                            <h3>{product.title}</h3>
+                        </div>
+                        <h4 className='price'>${product.price}</h4>
                     {
                         showItemCount && (
                         <ItemCount initial={1} stock={15} onAdd={handleAdd}/>

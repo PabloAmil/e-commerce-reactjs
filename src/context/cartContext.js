@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 
+
 const CartContext = createContext()
 
 export default CartContext;
@@ -38,6 +39,7 @@ export const CartProvider = ({children}) => {
 
     const isInCart = (id) => cart.some((item) => item.id === id);
 
+
     const total = cart.reduce((acc, item) => {
             return acc += (item.price * item.quantity)
         }, 0)
@@ -46,8 +48,14 @@ export const CartProvider = ({children}) => {
         return acc += item.quantity
     }, 0)
 
+    const handleClick = () => {
+        // localStorage.setItem('Cart', cart)
+        // console.log(cart)
+    }
+
+
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart, total, quantity}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart, total, quantity, handleClick}}>
             {children}
         </CartContext.Provider>     
     )

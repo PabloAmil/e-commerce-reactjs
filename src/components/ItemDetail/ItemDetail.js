@@ -16,9 +16,10 @@ const ItemDetail = ({ product }) => {
     };
 
     return (
-        <div className="itemDetailContainer">
-            <Description product={product} itemcount={showItemCount} handleAdd={handleAdd} showItemCount={showItemCount}/>
-        </div>
+            <div className="itemDetailContainer">
+                <Description product={product} itemcount={showItemCount} handleAdd={handleAdd} showItemCount={showItemCount}/>
+            </div>
+    
     )
 }
 

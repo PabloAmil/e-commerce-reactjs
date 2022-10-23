@@ -1,5 +1,21 @@
 .greeting {
-    background-color: black;
-    color: #fff;
+    color: rgb(10, 10, 10);
+    font-size: 40px;
+    font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: neon 5s infinite;
+}
+
+@keyframes neon {
+    0% , 39%, 41%, 59%, 61%, 100% {
+        text-shadow: 
+        white 0 0 12px,
+        #ff3a3a 0 0 34px,
+        #ff3a3a  0 0 46px;
+    }
+
+    40%, 60% {
+        text-shadow: none;
+    }
+    
 }

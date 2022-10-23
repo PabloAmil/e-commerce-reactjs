@@ -20,5 +20,3 @@ const CartWidget = () => {
 }
 
 export default CartWidget;
-
-// seguir 1.57.47

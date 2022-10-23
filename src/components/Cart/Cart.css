@@ -3,6 +3,20 @@
     cursor: pointer;
 }
 
+.cart-container {
+    min-height: 280px;
+    margin-top: 5em;
+    background-color: rgba(250, 235, 215, 0.89);
+    filter: brightness(1px);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+
+}
+
 .cart-img {
     height: 150px;
     width: 150px;
@@ -13,6 +27,19 @@
 }
 
 .total {
+    width: 100%;
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(24, 23, 23);
     
+}
+
+.total button {
+    margin-bottom: 1em;
+}
+
+tr td {
+    font-weight: bold;
 }
