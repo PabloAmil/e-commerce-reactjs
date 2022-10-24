@@ -1,11 +1,12 @@
 
 .loader-container {
+    margin-top: 4em;
     margin-left: 45%;
     display: flex;
     justify-content: center;
     text-align: center;
     width: 200px;
-    height: 50px;
+    height: auto;
     background-color: rgb(3 2 2 / 100%);
     border-radius: 15px;
 

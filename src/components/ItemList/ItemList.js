@@ -5,8 +5,6 @@ import './itemList.css'
 
 const ItemList = ({products = []}) => {
 
-    console.log(products)
-
     const [loading, setLoading] = useState(true)
 
 

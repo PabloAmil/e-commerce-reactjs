@@ -12,10 +12,16 @@
 }
 
 .itemList .card {
-    margin-bottom: 2em;
+    
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 3em;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 1.856);
    
 }
+
+
+
 .card-img {
     display: flex;
     justify-content: center;

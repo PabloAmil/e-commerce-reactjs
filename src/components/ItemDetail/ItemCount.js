@@ -6,7 +6,7 @@ import CartContext, {cart, handleClick} from '../../context/cartContext'
 
 const ItemCount = ({initial, stock, onAdd}) => {
     const [count, setCount] = useState(parseInt(initial))
-    const { cart, handleClick } = useContext(CartContext)
+    const { cart } = useContext(CartContext)
 
 
     const handleSubstract = () => {
@@ -27,9 +27,6 @@ const ItemCount = ({initial, stock, onAdd}) => {
     }
     
     
-
-
-
     return (
         <div className="options">
             <div className="item-counter">

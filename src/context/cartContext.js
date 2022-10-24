@@ -6,6 +6,7 @@ const CartContext = createContext()
 export default CartContext;
 
 export const CartProvider = ({children}) => {
+    
     const [cart, setCart] = useState([]);
 
     const addItem = (product, quantity) => {
@@ -48,14 +49,10 @@ export const CartProvider = ({children}) => {
         return acc += item.quantity
     }, 0)
 
-    const handleClick = () => {
-        // localStorage.setItem('Cart', cart)
-        // console.log(cart)
-    }
 
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart, total, quantity, handleClick}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart, total, quantity, setCart}}>
             {children}
         </CartContext.Provider>     
     )
