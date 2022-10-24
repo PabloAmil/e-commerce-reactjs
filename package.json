@@ -22,6 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://pabloamil.github.io/e-commerce-reactjs/",
   "eslintConfig": {
     "extends": [
       "react-app",
