@@ -1,13 +1,16 @@
-import { Button, Container } from 'react-bootstrap'
+
+import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import './Description.css'
 import ItemCount from "./ItemCount";
 
-const Description = ( {product, itemcount, handleAdd, showItemCount} ) => {
+const Description = ( {product, itemcount, handleAdd, showItemCount } ) => {
+
+
     return (
         
             <div className="description-container">
-                <img src={product.pictureUrl}></img>
+                <img src={product.pictureUrl} alt={product.title}></img>
                     <div className='product-details'>
                         <div className='title-container'>
                             <h3>{product.title}</h3>

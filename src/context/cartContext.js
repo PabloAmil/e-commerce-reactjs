@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 
-
 const CartContext = createContext()
 
 export default CartContext;
@@ -48,7 +47,6 @@ export const CartProvider = ({children}) => {
     const quantity = cart.reduce((acc, item) => {
         return acc += item.quantity
     }, 0)
-
 
 
     return (

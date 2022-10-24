@@ -10,9 +10,9 @@ import OrderModal from "../OrderModal/OrderModal";
 
 
 const buyerMock = {
-    name: "Pablo",
+    name: "usuario",
     phone: '1234-5678',
-    email: 'pabloamil@mail.com'
+    email: 'usuario@mail.com'
 }
 
 const Cart = () => {
@@ -25,13 +25,10 @@ const Cart = () => {
 
     const handleRemove = (itemId) => {
         removeItem(itemId)
-        // actualizar y guardar el cart en local storage
     };
 
     const handleOpen = () => {
         setShowModal(true)
-        
-        // limpiar local storage
     };
 
     const handleClose = () => {
@@ -46,9 +43,8 @@ const Cart = () => {
         }
         const newOrderId = await createOrder(newOrder)
         setOrderId(newOrderId);
-        console.log(newOrder.items) // sacar luego
         clear()
-        // limpiar local storage
+        
     };
 
     
@@ -69,7 +65,7 @@ const Cart = () => {
                     <tbody>
                         {cart.map((item) => (
                                 <tr key={item.id}>
-                                    <td><img src={item.pictureUrl} className="cart-img"></img></td>
+                                    <td><img src={item.pictureUrl} className="cart-img" alt={item.title}></img></td>
                                     <td>{item.title}</td>
                                     <td>$ {item.price}</td>
                                     <td>{item.quantity}</td>
