@@ -14,7 +14,6 @@ export const CartProvider = ({children}) => {
             ...product,
             quantity
         };
-        
         setCart([...cart, item]);
         } else {
         const itemIdex = cart.findIndex((item) => item.id === parseInt(product.id))

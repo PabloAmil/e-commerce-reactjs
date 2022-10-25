@@ -1,21 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import './ItemCount.css'
 import { Button } from "react-bootstrap";
-
-import CartContext from "../../context/cartContext"
 
 
 
 const ItemCount = ({initial, stock, onAdd}) => {
     const [count, setCount] = useState(parseInt(initial))
 
-    /////
 
-    const cart = useContext(CartContext)
-
-
-    /////
-    
     const handleSubstract = () => {
         setCount(count - 1);
     }
@@ -30,9 +22,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
     const manageClickButton = () => {
         onAdd(count) 
-        console.log(cart)
+        
     }
-    
     
     return (
         <div className="options">

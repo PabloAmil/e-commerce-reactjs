@@ -7,7 +7,6 @@ import './OrderModal.css'
 const OrderModal = ({showModal, onClose, onBuy, orderId}) => {
     
 
-
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [aprobation, setAprobation] = useState(false)

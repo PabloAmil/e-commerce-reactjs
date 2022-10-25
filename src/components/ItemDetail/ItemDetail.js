@@ -12,7 +12,6 @@ const ItemDetail = ({ product }) => {
         setCount(value);
         setShowItemCount(false);
         addItem(product, value);
-        
     };
 
     return (

@@ -47,8 +47,6 @@ const Cart = () => {
         
     };
 
-    
-
     return(
         <Container className="cart-container">
             {cart.length > 0 &&
